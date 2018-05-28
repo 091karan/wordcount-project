@@ -1,0 +1,13 @@
+<h1>There are {{ count }} words present in your text.</h1>
+
+<a href='{% url 'home' %}'>Go back.</a>
+
+<h2>Your words: </h2>
+{{ fulltext }}
+
+<h2>Word count: </h2>
+{% for word,occurance in sorteddictionary %}
+
+{{ word }} - {{ occurance }}
+<br />
+{% endfor %}
